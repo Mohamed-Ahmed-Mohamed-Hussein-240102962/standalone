@@ -5,6 +5,9 @@ inputs:
     default: 'true'
     required: false
     description: cahing appility
+outputs:
+  state:
+    value: ${{steps.out.outputs.cach}}
 runs:
    using: 'composite'
    steps:
@@ -20,3 +23,8 @@ runs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
         shell: bash
+      - name: output
+        run: |
+          echo "cahe=${{inputs.caching}}" >> GITHUB_OUTPUT
+        shell: bash
+        id: out
