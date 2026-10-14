@@ -11,6 +11,8 @@ inputs:
 runs:
   using: 'composite'
   steps:
+    - name: pull source code
+      uses: actions/checkout@v6
     -  name: Login to Docker Hub
        uses: docker/login-action@v4
        with:
