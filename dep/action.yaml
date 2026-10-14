@@ -7,7 +7,7 @@ inputs:
     description: cahing appility
 outputs:
   state:
-    value: ${{steps.out.outputs.cach}}
+    value: ${{steps.out.outputs.cache}
 runs:
    using: 'composite'
    steps:
