@@ -11,7 +11,7 @@ inputs:
 outputs:
   image_tag:
     description: "The generated Docker image tag "
-    value: ${{ steps.meta.outputs.tags }}
+    value: ${{ steps.meta.outputs.version }}
 
 runs:
   using: 'composite'
